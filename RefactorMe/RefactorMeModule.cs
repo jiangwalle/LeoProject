@@ -7,6 +7,7 @@ namespace RefactorMe
 	{
 		protected override void Load(ContainerBuilder builder)
 		{
+            //test
 			base.Load(builder);
 		}
 	}
