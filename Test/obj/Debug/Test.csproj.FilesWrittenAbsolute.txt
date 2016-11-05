@@ -1,0 +1,10 @@
+/Users/wallejiang/Desktop/C# walle/Test/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/Test.exe.mdb
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/Test.exe
+/Users/wallejiang/Desktop/C# walle/Test/obj/Debug/Test.exe
+/Users/wallejiang/Desktop/C# walle/Test/obj/Debug/Test.exe.mdb
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/Autofac.dll
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/Faker.dll
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/AutoMapper.dll
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/RefactorMe.DontRefactor.dll
+/Users/wallejiang/Desktop/C# walle/Test/bin/Debug/RefactorMe.DontRefactor.dll.mdb
