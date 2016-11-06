@@ -1,58 +1,119 @@
 ﻿using System;
+using System.Reflection;
+using System.Linq;
 using System.Collections.Generic;
 
+using Autofac;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using RefactorMe.DontRefactor.Models;
 using RefactorMe.DontRefactor.Data.Implementation;
-
+using RefactorMe;
+using RefactorMe.service;
 
 namespace Test
 {
-	public class Source
+	public class TestSolutionA
 	{
-		public int Value1 { get; set; }
-		public int Value2 { get; set; }
+		private ProductDataConsolidatorSolutionA _solutionA;
+
+		public TestSolutionA()
+		{
+			var builder = new ContainerBuilder();
+			builder.RegisterModule(new AutoMapperModule());
+			builder.RegisterModule(new SolutionAModule());
+			var container = builder.Build();
+			_solutionA = container.Resolve<ProductDataConsolidatorSolutionA>();
+		}
+
+		public void TestGetProductsInNZDollor()
+		{
+			List<Product> products = _solutionA.Get();
+
+			// Assert products is right
+			foreach (var item in products)
+			{
+				Console.WriteLine(item);
+			}
+		}
+
+		public void TestGetProductsInUSDollor()
+		{
+			List<Product> products = _solutionA.GetInUSDollars();
+			// Assert products is right
+			foreach (var item in products)
+			{
+				Console.WriteLine(item);
+			}
+		}
+
+		public void TestGetProductsInEuroDollor()
+		{
+			List<Product> products = _solutionA.GetInEuros();
+			// Assert products is right
+			foreach (var item in products)
+			{
+				Console.WriteLine(item);
+			}
+		}
 	}
 
-	public class Destination
+	public class TestSolutionB
 	{
-		public int Total { get; set; }
+		private ProductDataConsolidatorSolutionB _solutionB;
+
+		public TestSolutionB()
+		{
+			var builder = new ContainerBuilder();
+			builder.RegisterModule(new AutoMapperModule());
+			builder.RegisterModule(new SolutionBModule());
+			var container = builder.Build();
+			_solutionB = container.Resolve<ProductDataConsolidatorSolutionB>();
+		}
+
+		public void TestGetProductsInNZDollor()
+		{
+			List<Product> products = _solutionB.Get();
+
+			// Assert products is right
+			foreach (var item in products)
+			{
+				Console.WriteLine(item);
+			}
+		}
+
+		public void TestGetProductsInUSDollor()
+		{
+			List<Product> products = _solutionB.GetInUSDollars();
+			// Assert products is right
+			foreach (var item in products)
+			{
+				Console.WriteLine(item);
+			}
+		}
+
+		public void TestGetProductsInEuroDollor()
+		{
+			List<Product> products = _solutionB.GetInEuros();
+			// Assert products is right
+			foreach (var item in products)
+			{
+				Console.WriteLine(item);
+			}
+		}
 	}
 
 	class MainClass
 	{
-		public static void test()
-		{
-			List<object> repos = new List<object>();
-
-			repos.Add(new LawnmowerRepository());
-
-			foreach(var i in repos) {
-				Type type = i.GetType();
-				Console.WriteLine(type.Name);
-			}
-		}
-
 		public static void Main(string[] args)
 		{
-			//Mapper.Initialize(cfg =>
-			// 			cfg.CreateMap<Source, Destination>()
-			//                  .ForMember(dest => dest.Total, opt => opt.ResolveUsing<CustomResolver>()));
+			// Note: Don't test solutionA and solutionB at the same time
 
-			// 		Mapper.AssertConfigurationIsValid();
+			TestSolutionA solutionA = new TestSolutionA();
+			solutionA.TestGetProductsInEuroDollor();
 
-			//var source = new Source
-			//{
-			//	Value1 = 5,
-			//	Value2 = 7
-			//};
-
-			//var result = Mapper.Map<Source, Destination>(source);
-
-			//Console.WriteLine(result.Total);
-
-			test();
+			//TestSolutionB solutionB = new TestSolutionB();
+			//solutionB.TestGetProductsInNZDollor();
 		}
 	}
 }

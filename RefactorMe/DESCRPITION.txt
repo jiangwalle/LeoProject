@@ -1,0 +1,50 @@
+﻿Thanks for the third trial oppotunity. And I am really struggled to get the final clean, rubust, and extensive
+solution which only need to add a couple of files instead of modifing exist functions when a new product is
+ready to consolidate.
+
+1, Solution
+After thinking over the real world. I come up with two ideas.
+
+A: Create related service to each repository. And then ProductDataConsolidator could utilize each servcie to merge
+specific stuff to 'Product' list.
+
+Advantages: When thinking about the real world. We still need services to provide specific informations about each stuff
+like the 'the color of tshirt'. However the current system dosen't have such services to provide this information.
+If this kind of requirements is important, we need these services. Meanwhile we could manage the conventions in each 
+serivce. Once a new stuff is added and need consolidating. We only need to create new service instead of modifing exist
+one which could make system more rubust.
+
+Disadvantages: Too heavy and need to create more classes.
+
+B: Create a service to scan all repositories in RefactorMe.DontRefactor Assembly. And automatically done converting and
+consolidating.
+
+Advantages: If there is nothing more requirements, and consolidate stuffs to product list is the only issue to be solve.
+Then this is the first choice I would choose. Cause it is much lighter and easier to implemented and there is almost 
+nothing needed to do if a new stuff added to system.
+
+Disadvantages: It just provide consolidator function. And the new repository need to follow certain rules which could be
+useful in scanning repository.
+
+2, Feature
+a, Using AutoMapper to convert specific stuff to prodcut
+b, Using AutoFac for dependency injection
+
+3, Project structure descrption
+
+RefactorMe
+	Common --------------------------------------- Classes and services shared with two solutions
+	SolutionA ------------------------------------ Contains all solutionA related files
+		Mapper ----------------------------------- AutoMapper value resolver(For converting product type)
+		Service ---------------------------------- Service interfaces
+			Impl --------------------------------- Service implimentation
+	SolutionB ------------------------------------ Same struture as solutionA
+		Mapper -----------------------------------
+		Service ----------------------------------
+			Impl ---------------------------------
+	ProductDataConsolidatorSolutionA.cs ---------- SolutionA consolidator service
+	ProductDataConsolidatorSolutionB.cs ---------- SolutionB consolidator service
+
+4, Next release
+1, Modify functions in ProductDataConsolidatorSolutionA and ProductDataConsolidatorSolutionB to static. 
+   (Time is not enough now)

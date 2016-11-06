@@ -3,11 +3,18 @@ using System.Collections.Generic;
 
 using RefactorMe.Exception;
 
-namespace RefactorMe
+namespace RefactorMe.service
 {
 	public class CurrencyServiceInMemory : ICurrencyService
 	{
 		private static Dictionary<CurrencyType, Currency> Currencies = new Dictionary<CurrencyType, Currency>();
+
+		public CurrencyServiceInMemory()
+		{
+			Currencies.Add(CurrencyType.NZ_DOLLOR, new Currency(CurrencyType.NZ_DOLLOR, 1.00f));
+			Currencies.Add(CurrencyType.US_DOLLOR, new Currency(CurrencyType.US_DOLLOR, 0.76f));
+			Currencies.Add(CurrencyType.EURO_DOLLOR, new Currency(CurrencyType.EURO_DOLLOR, 0.67f));
+		}
 
 		public void AddCurrency(Currency currency)
 		{

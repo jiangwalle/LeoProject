@@ -47,19 +47,31 @@
   <ItemGroup>
     <Compile Include="ProductDataConsolidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Exceptions\UnknownCurrencyException.cs" />
-    <Compile Include="Currency.cs" />
-    <Compile Include="Mapper\TShirtResolver.cs" />
-    <Compile Include="Mapper\LawnmowerResolver.cs" />
-    <Compile Include="Mapper\PhoneCaseResolver.cs" />
-    <Compile Include="AutoMapperConfig.cs" />
-    <Compile Include="Services\Impl\CurrencyServiceInMemory.cs" />
-    <Compile Include="Services\ICurrencyService.cs" />
-    <Compile Include="Services\IProductService.cs" />
-    <Compile Include="Services\Impl\ProductService.cs" />
-    <Compile Include="RefactorMeModule.cs" />
-    <Compile Include="Services\Impl\LawnmowerService.cs" />
-    <Compile Include="Services\Impl\TShirtService.cs" />
+    <Compile Include="SolutionA\Mapper\LawnmowerResolver.cs" />
+    <Compile Include="SolutionA\Mapper\PhoneCaseResolver.cs" />
+    <Compile Include="SolutionA\Mapper\TShirtResolver.cs" />
+    <Compile Include="SolutionB\Mapper\ProductTypeResolver.cs" />
+    <Compile Include="SolutionB\Service\IProductConsolidatorService.cs" />
+    <Compile Include="SolutionB\ReflectionHelper.cs" />
+    <Compile Include="SolutionB\SolutionBModule.cs" />
+    <Compile Include="SolutionB\SolutionBProfile.cs" />
+    <Compile Include="Common\UnknownCurrencyException.cs" />
+    <Compile Include="Common\Currency.cs" />
+    <Compile Include="Common\ICurrencyService.cs" />
+    <Compile Include="Common\CurrencyServiceInMemory.cs" />
+    <Compile Include="ProductDataConsolidatorSolutionA.cs" />
+    <Compile Include="ProductDataConsolidatorSolutionB.cs" />
+    <Compile Include="SolutionA\Service\IProductConvertService.cs" />
+    <Compile Include="SolutionA\Service\ILawnmowerService.cs" />
+    <Compile Include="SolutionA\Service\IPhoneCaseService.cs" />
+    <Compile Include="SolutionA\Service\ITShirtService.cs" />
+    <Compile Include="SolutionA\Service\Impl\LawnmowerService.cs" />
+    <Compile Include="SolutionA\SolutionAProfile.cs" />
+    <Compile Include="Common\AutoMapperModule.cs" />
+    <Compile Include="SolutionA\SolutionAModule.cs" />
+    <Compile Include="SolutionA\Service\Impl\PhoneCaseService.cs" />
+    <Compile Include="SolutionA\Service\Impl\TShirtService.cs" />
+    <Compile Include="SolutionB\Service\Impl\ProductConsolidatorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README-FIRST.txt" />
@@ -71,13 +83,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="Mapper\" />
-    <Folder Include="Services\" />
-    <Folder Include="Services\Impl\" />
+    <Folder Include="SolutionA\" />
+    <Folder Include="SolutionA\Mapper\" />
+    <Folder Include="SolutionB\" />
+    <Folder Include="SolutionB\Mapper\" />
+    <Folder Include="SolutionA\Service\" />
+    <Folder Include="SolutionB\Service\" />
+    <Folder Include="Common\" />
+    <Folder Include="SolutionA\Service\Impl\" />
+    <Folder Include="SolutionB\Service\Impl\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="DESCRPITION.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,3 +8,15 @@
 /Users/wallejiang/Desktop/C# walle/Test/bin/Debug/AutoMapper.dll
 /Users/wallejiang/Desktop/C# walle/Test/bin/Debug/RefactorMe.DontRefactor.dll
 /Users/wallejiang/Desktop/C# walle/Test/bin/Debug/RefactorMe.DontRefactor.dll.mdb
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/Test.exe.mdb
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/Test.exe
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/obj/Debug/Test.exe
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/obj/Debug/Test.exe.mdb
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/Autofac.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/Faker.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/AutoMapper.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/RefactorMe.DontRefactor.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/RefactorMe.DontRefactor.dll.mdb
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/RefactorMe.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/Test/bin/Debug/RefactorMe.dll.mdb

@@ -1,0 +1,9 @@
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/bin/Debug/Autofac.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/bin/Debug/AutoMapper.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/bin/Debug/RefactorMe.DontRefactor.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/bin/Debug/RefactorMe.DontRefactor.dll.mdb
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/bin/Debug/RefactorMe.dll.mdb
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/bin/Debug/RefactorMe.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/obj/Debug/RefactorMe.dll
+/Users/wallejiang/projects/proj_temp/leoproject/LeoProject/RefactorMe/obj/Debug/RefactorMe.dll.mdb

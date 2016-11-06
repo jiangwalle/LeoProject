@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RefactorMe
+namespace RefactorMe.service
 {
 	public interface ICurrencyService
 	{
